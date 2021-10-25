@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
+    // setting dark background and white text
+    document.body.classList.add("bg-dark", "text-white");
     // declaring state values and setting initital values
     const [values, setValues] = useState({ bill: 0, tip: 5, people: 1 });
     const [tipPerPerson, setTipPerPerson] = useState(0);
@@ -26,7 +28,7 @@ function App() {
     return (
         <>
             <h1 className="text-center mt-5">Tip Calculator</h1>
-            <div className="container border mt-5">
+            <div className="container mt-5">
                 <div className="row">
                     <div className="col-6 text-center">
                         <form className="" onSubmit={handleSubmit}>
